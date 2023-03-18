@@ -40,35 +40,35 @@ export default function Build({ org }: { org: any }) {
                             <tbody>
                                 <tr>
                                     <th scope="row">Processador</th>
-                                    <td><button><i className="fa-solid fa-plus"></i> Processador</button></td>
+                                    <td><Link href={ `/processadores` }><button><i className="fa-solid fa-plus"></i> Processador</button></Link></td>
                                 </tr>
                                 <tr>
                                     <th scope="row">Cooler do processador</th>
-                                    <td><button><i className="fa-solid fa-plus"></i> Cooler do processador</button></td>
+                                    <td><Link href={ `#` }><button><i className="fa-solid fa-plus"></i> Cooler do processador</button></Link></td>
                                 </tr>
                                 <tr>
                                     <th scope="row">Placa de vídeo</th>
-                                    <td><button><i className="fa-solid fa-plus"></i> Placa de vídeo</button></td>
+                                    <td><Link href={ `/placas-video` }><button><i className="fa-solid fa-plus"></i> Placa de vídeo</button></Link></td>
                                 </tr>
                                 <tr>
                                     <th scope="row">Placa-mãe</th>
-                                    <td><button><i className="fa-solid fa-plus"></i> Placa-mãe</button></td>
+                                    <td><Link href={ `/placas-mae` }><button><i className="fa-solid fa-plus"></i> Placa-mãe</button></Link></td>
                                 </tr>
                                 <tr>
                                     <th scope="row">Memória</th>
-                                    <td><button><i className="fa-solid fa-plus"></i> Memória</button></td>
+                                    <td><Link href={ `/memorias` }><button><i className="fa-solid fa-plus"></i> Memória</button></Link></td>
                                 </tr>
                                 <tr>
                                     <th scope="row">Armazenamento</th>
-                                    <td><button><i className="fa-solid fa-plus"></i> Armazenamento</button></td>
+                                    <td><Link href={ `#` }><button><i className="fa-solid fa-plus"></i> Armazenamento</button></Link></td>
                                 </tr>
                                 <tr>
                                     <th scope="row">Gabinete</th>
-                                    <td><button><i className="fa-solid fa-plus"></i> Gabinete</button></td>
+                                    <td><Link href={ `/gabinetes` }><button><i className="fa-solid fa-plus"></i> Gabinete</button></Link></td>
                                 </tr>
                                 <tr>
                                     <th scope="row">Fonte</th>
-                                    <td><button><i className="fa-solid fa-plus"></i> Fonte</button></td>
+                                    <td><Link href={ `/fontes` }><button><i className="fa-solid fa-plus"></i> Fonte</button></Link></td>
                                 </tr>
                             </tbody>
                         </table>

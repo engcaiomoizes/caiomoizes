@@ -8,6 +8,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import { ParsedUrlQuery } from "querystring";
 import { ReactElement, JSXElementConstructor, ReactFragment, ReactPortal, Key } from "react";
 import Script from "next/script";
+import Link from "next/link";
 
 interface Params extends ParsedUrlQuery {
     componente: string;
@@ -111,7 +112,7 @@ export default function Componentes({ data, headers }: { data: any; headers: any
                                                 <input className="form-check-input" type="checkbox" value="" id="intel" />
                                             </th>
                                             <td>
-                                                <img src={`http://localhost:5000/${result.imagem}`} />
+                                                <Link href={ `#` }><img src={`http://localhost:5000/${result.imagem}`} /></Link>
                                                 <a href="#">{result.col1}</a>
                                             </td>
                                             <td><span>{result.col2}</span></td>
