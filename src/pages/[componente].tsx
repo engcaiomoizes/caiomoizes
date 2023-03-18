@@ -93,6 +93,7 @@ export default function Componentes({ data, headers }: { data: any; headers: any
                                     <th scope="col">{headers.col3}</th>
                                     <th scope="col">{headers.col4}</th>
                                     <th scope="col">{headers.col5}</th>
+                                    <td className={`${styles.colSmall}`} scope="col"></td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -112,68 +113,21 @@ export default function Componentes({ data, headers }: { data: any; headers: any
                                                 <input className="form-check-input" type="checkbox" value="" id="intel" />
                                             </th>
                                             <td>
-                                                <Link href={ `#` }><img src={`http://localhost:5000/${result.imagem}`} /></Link>
-                                                <a href="#">{result.col1}</a>
+                                                <Link href={ `#` }>
+                                                    <div className={ `` }>
+                                                        <img src={`https://api-caiomoizes.vercel.app/${result.imagem}`} />
+                                                    </div>
+                                                </Link>
+                                                <Link href={ `#` }>{result.col1}</Link>
                                             </td>
                                             <td><span>{result.col2}</span></td>
                                             <td><span>{result.col3}</span></td>
                                             <td><span>{result.col4}</span></td>
                                             <td><span>{result.col5}</span></td>
+                                            <td><button><i className="fa-solid fa-plus"></i></button></td>
                                         </tr>
                                     )) : null
                                 }
-                                <tr>
-                                    <th scope="row">
-                                        <input className="form-check-input" type="checkbox" value="" id="intel" />
-                                    </th>
-                                    <td>
-                                        <img src='http://localhost:5000/uploads/2023-03-17T03-59-41.836Z-fonte-cx650f.png' />
-                                        <a href="#">AMD Ryzen 7 5700X</a>
-                                    </td>
-                                    <td><span>3.4 GHz</span></td>
-                                    <td><span>8</span></td>
-                                    <td><span>16</span></td>
-                                    <td><span>65 W</span></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        <input className="form-check-input" type="checkbox" value="" id="intel" />
-                                    </th>
-                                    <td>
-                                        <img src='http://localhost:5000/uploads/2023-03-17T03-59-41.836Z-fonte-cx650f.png' />
-                                        <a href="#">AMD Ryzen 7 5700X</a>
-                                    </td>
-                                    <td><span>3.4 GHz</span></td>
-                                    <td><span>8</span></td>
-                                    <td><span>16</span></td>
-                                    <td><span>65 W</span></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        <input className="form-check-input" type="checkbox" value="" id="intel" />
-                                    </th>
-                                    <td>
-                                        <img src='http://localhost:5000/uploads/2023-03-17T03-59-41.836Z-fonte-cx650f.png' />
-                                        <a href="#">AMD Ryzen 7 5700X</a>
-                                    </td>
-                                    <td><span>3.4 GHz</span></td>
-                                    <td><span>8</span></td>
-                                    <td><span>16</span></td>
-                                    <td><span>65 W</span></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        <input className="form-check-input" type="checkbox" value="" id="intel" />
-                                    </th>
-                                    <td>
-                                        <img src='http://localhost:5000/uploads/2023-03-17T03-59-41.836Z-fonte-cx650f.png' />
-                                        <a href="#">AMD Ryzen 7 5700X</a>
-                                    </td>
-                                    <td><span>3.4 GHz</span></td>
-                                    <td><span>8</span></td>
-                                    <td><span>16</span></td>
-                                    <td><span>65 W</span></td>
-                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -268,6 +222,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
             data: data,
             headers: headers,
         },
-        revalidate: 20
+        revalidate: 60
     }
 }
