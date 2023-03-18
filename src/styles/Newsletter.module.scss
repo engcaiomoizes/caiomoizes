@@ -1,0 +1,172 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    .form {
+        width: 500px;
+        margin-right: 1rem;
+        text-align: center;
+
+        input, textarea {
+            width: 100%;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border: 1px solid rgba(0, 0, 0, 0.137);
+            border-radius: 0.3rem;
+        }
+    
+        textarea {
+            resize: none;
+        }
+    
+        button {
+            padding: 0.8rem;
+            width: 40%;
+            background: rgb(195, 255, 56);
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: filter 0.2s;
+            margin: 1rem;
+
+            &:hover {
+                filter: brightness(0.9);
+            }
+        }
+    }
+
+    .caixacontatos {
+        width: 500px;
+        padding: 1rem;
+        background: rgb(237, 255, 194);
+        height: 500px;
+        text-align: center;
+        border-radius: 0.8rem;
+        margin-left: 5rem;
+        overflow: auto;
+
+        input {
+            width: 100%;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border: 1px solid rgba(0, 0, 0, 0.137);
+            border-radius: 0.3rem;
+        }
+    }
+
+    .caixaindividual {
+        background: rgb(229, 240, 182);
+        border-radius: 0.5rem;
+        text-align: left;
+        max-height: 200px;
+        box-sizing: content-box;
+        margin: 1rem 0;
+
+        .nome {
+            font-size: 1.5rem;
+            text-align: left;
+            padding: 0.1rem 1rem;
+            // margin: 0.5rem;
+            font-weight: bold;
+        }
+
+        .boxnome {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            div {
+                margin-right: 1rem;
+            }
+
+            a {
+                color: red;
+                cursor: pointer;
+                margin-left: 0.5rem;
+
+                &:hover {
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .dados {
+            padding: 0.5rem 1rem;
+            p {
+                margin: 0;
+            }
+        }
+    }
+}
+
+.div1 {
+    padding-top:5px;font-family:Arial,Helvetica,sans-serif;font-size:10px;color:#999999;
+
+    a {
+        text-decoration:none;font-family:Arial,Helvetica,sans-serif;font-size:10px;color:#999999;
+    }
+}
+
+.containerFluid {
+    height: auto;
+    display: flex;
+    // position: relative;
+    top: 50px;
+    padding: 40px 100px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    .form {
+        width: 500px;
+        margin-right: 1rem;
+        text-align: center;
+
+        input, textarea {
+            width: 100%;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border: 1px solid rgba(0, 0, 0, 0.137);
+            border-radius: 0.3rem;
+        }
+    
+        textarea {
+            resize: none;
+        }
+    
+        button {
+            padding: 0.8rem;
+            width: 40%;
+            background: rgb(195, 255, 56);
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: filter 0.2s;
+            margin: 1rem;
+            font-weight: bold;
+
+            &:hover {
+                filter: brightness(0.9);
+            }
+        }
+    }
+}
+
+.descPage {
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .containerFluid {
+        padding: 0;
+        .form {
+            width: 100%;
+            margin: 0;
+            input {
+                display: inline-block;
+            }
+        }
+    }
+}
