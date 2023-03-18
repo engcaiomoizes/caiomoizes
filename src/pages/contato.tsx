@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import Link from 'next/link';
+import Script from 'next/script';
 
 export default function Contato() {
     const [nome, setNome] = useState('');
@@ -55,8 +56,8 @@ export default function Contato() {
                 <title>Caio Moizés - Contato</title>
                 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossOrigin="anonymous"></link>
                 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet"></link>
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossOrigin="anonymous"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/all.min.js"></script>
+                <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossOrigin="anonymous"></Script>
+                <Script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/all.min.js"></Script>
             </head>
             <body>
                 <Header />
@@ -86,7 +87,7 @@ export default function Contato() {
                             <div style={{ clear: 'both' }}></div>
                             <input className="botao-enviar" type="submit" name="enviar" id="enviar" onClick={(e) => {handleSubmit(e)}} value="Enviar" />
                         </form>
-                        <p>Caso preferir, entre em contato via WhatsApp clicando <a href={`https://wa.me/${process.env.NEXT_PUBLIC_TELEFONE_NUM}`} target="_blank">aqui</a>.</p>
+                        <p>Caso preferir, entre em contato via WhatsApp clicando <Link href={ `https://wa.me/${process.env.NEXT_PUBLIC_TELEFONE_NUM}` }>aqui</Link>.</p>
                     </div>
                 </div>
                 <Footer />

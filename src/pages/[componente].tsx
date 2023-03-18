@@ -5,17 +5,25 @@ import Footer from '../components/footer';
 import styles from '../styles/Componentes.module.scss';
 import { GetStaticPaths, GetStaticProps } from 'next';
 
-export default function Componentes({ data }) {
+import { ParsedUrlQuery } from "querystring";
+import { ReactElement, JSXElementConstructor, ReactFragment, ReactPortal, Key } from "react";
+import Script from "next/script";
+
+interface Params extends ParsedUrlQuery {
+    componente: string;
+}
+
+export default function Componentes({ data, headers }: { data: any; headers: any }) {
     const { query } = useRouter();
 
     return (
         <html>
             <head>
                 <title>Caio Moizés - Contato</title>
-                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous"></link>
+                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossOrigin="anonymous"></link>
                 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet"></link>
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/all.min.js"></script>
+                <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossOrigin="anonymous"></Script>
+                <Script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/all.min.js"></Script>
             </head>
             <body>
                 <Header />
@@ -79,17 +87,25 @@ export default function Componentes({ data }) {
                             <thead>
                                 <tr>
                                     <td className={`${styles.colSmall}`} scope="col"></td>
-                                    <th scope="col">{data.headers.col1}</th>
-                                    <th scope="col">{data.headers.col2}</th>
-                                    <th scope="col">{data.headers.col3}</th>
-                                    <th scope="col">{data.headers.col4}</th>
-                                    <th scope="col">{data.headers.col5}</th>
+                                    <th scope="col">{headers.col1}</th>
+                                    <th scope="col">{headers.col2}</th>
+                                    <th scope="col">{headers.col3}</th>
+                                    <th scope="col">{headers.col4}</th>
+                                    <th scope="col">{headers.col5}</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {
-                                    data.res.map(result => (
-                                        <tr>
+                                    data.map((result: {
+                                            id: Key;
+                                            imagem: any;
+                                            col1: string | number;
+                                            col2: string | number;
+                                            col3: string | number;
+                                            col4: string | number;
+                                            col5: string | number;
+                                        }) => (
+                                        <tr key={result.id}>
                                             <th scope="row">
                                                 <input className="form-check-input" type="checkbox" value="" id="intel" />
                                             </th>
@@ -181,7 +197,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-    const { componente } = context.params;
+    const { componente } = context.params as Params;
 
     const response = await fetch(`https://api-caiomoizes.vercel.app/${componente}`);
     const data = await response.json();
@@ -247,10 +263,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
     
     return {
         props: {
-            data: {
-                headers: headers,
-                res: data
-            }
+            data: data,
+            headers: headers,
         },
         revalidate: 20
     }

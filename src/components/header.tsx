@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Header() {
     return (
         <div className="header">
@@ -11,15 +13,15 @@ export default function Header() {
             <label htmlFor="checkbox_toggle" className="hamburger">&#9776;</label>
             <div className="menu">
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/setup">Meu Setup</a></li>
-                    <li><a href="/habilidades">Habilidades</a></li>
-                    {/* <li><a href="/portfolio">Portfólio</a></li>
-                    <li><a href="/orcamento">Orçamento</a></li> */}
-                    <li><a href="/contato">Contato</a></li>
-                    <li><a href="/chat">Chat</a></li>
-                    <li><a href="/newsletter">Newsletter</a></li>
-                    <li><a href="/build">Monte seu PC</a></li>
+                    <li><Link href={ `/` }>Home</Link></li>
+                    <li><Link href={ `/setup` }>Meu Setup</Link></li>
+                    <li><Link href={ `/habilidades` }>Habilidades</Link></li>
+                    {/* <li><Link href={ `/portfolio` }>Portfólio</Link></li>
+                    <li><Link href={ `/orcamento` }>Orçamento</Link></li> */}
+                    <li><Link href={ `/contato` }>Contato</Link></li>
+                    <li><Link href={ `/chat` }>Chat</Link></li>
+                    <li><Link href={ `/newsletter` }>Newsletter</Link></li>
+                    <li><Link href={ `/build` }>Monte seu PC</Link></li>
                 </ul>
             </div>
         </div>

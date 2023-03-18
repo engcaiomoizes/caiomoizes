@@ -51,14 +51,14 @@ export default function AblyChatComponent() {
         const author = message.connectionId === ably.connection.id ? "Eu" : message.name;
         if (author == "Eu") {
             return (
-                <div className="sua-mensagem">
+                <div className="sua-mensagem" key={message.id}>
                     <h2>{author}</h2>
                     <span>{message.data}</span>
                 </div>
             );
         } else {
             return (
-                <div className="mensagem">
+                <div className="mensagem" key={message.id}>
                     <h2>{author}</h2>
                     <span>{message.data}</span>
                 </div>

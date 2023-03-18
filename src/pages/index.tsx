@@ -5,6 +5,7 @@ import styles from '@/styles/Home.module.css'
 import Link from 'next/link';
 import Header from '../components/header';
 import Footer from '../components/footer';
+import Script from 'next/script';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,8 +17,8 @@ export default function Home() {
                 <title>Caio Moizés - Engenheiro da Computação</title>
                 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossOrigin="anonymous"></link>
                 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet"></link>
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossOrigin="anonymous"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js"></script>
+                <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossOrigin="anonymous"></Script>
+                <Script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js"></Script>
             </head>
             <body>
                 <Header />
@@ -31,7 +32,7 @@ export default function Home() {
                             <p>Meu nome é Caio Moizés Santos, sou formado em Engenharia da Computação pelo UniSALESIANO Araçatuba-SP.</p>
                             <div className="redes">
                                 <Link href={ 'https://wa.me/' + process.env.NEXT_PUBLIC_TELEFONE_NUM }><span><i className="fa-brands fa-whatsapp"></i> (18) 99752-4254</span></Link>
-                                <a href="#"><span><i className="fa-solid fa-envelope"></i> {process.env.NEXT_PUBLIC_EMAIL_ADDRESS}</span></a>
+                                <span><i className="fa-solid fa-envelope"></i> {process.env.NEXT_PUBLIC_EMAIL_ADDRESS}</span>
                                 <Link href={ 'https://instagram.com/' + process.env.NEXT_PUBLIC_INSTAGRAM_NICK }><span><i className="fa-brands fa-instagram"></i> @{process.env.NEXT_PUBLIC_INSTAGRAM_NICK}</span></Link>
                             </div>
                         </div>

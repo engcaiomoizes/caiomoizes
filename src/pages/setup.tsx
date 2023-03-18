@@ -1,5 +1,6 @@
 import Header from '../components/header';
 import Footer from '../components/footer';
+import Script from 'next/script';
 
 export default function Setup() {
     return (
@@ -8,8 +9,8 @@ export default function Setup() {
                 <title>Caio Moizés - Meu Setup</title>
                 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossOrigin="anonymous"></link>
                 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet"></link>
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossOrigin="anonymous"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/all.min.js"></script>
+                <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossOrigin="anonymous"></Script>
+                <Script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/all.min.js"></Script>
             </head>
             <body>
                 <Header />
@@ -54,7 +55,7 @@ export default function Setup() {
                         <div className="item-setup">
                             <img src="img/monitor.png" />
                             <h2>Monitor</h2>
-                            <span>Samsung Odyssey G3 24" 144Hz</span>
+                            <span>Samsung Odyssey G3 24&quot; 144Hz</span>
                         </div>
                         <div className="item-setup">
                             <img src="img/cadeira.png" />
