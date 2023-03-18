@@ -65,7 +65,7 @@ export default function Chat() {
                 <Header />
                 <div className="container-fluid">
                     <h1>Chat</h1>
-                    <div className="container-pers2">
+                    <div className="container-pers2" key={`chat`}>
                         <p>Utilize esse chat para falar com os visitantes do site em tempo real.</p>
                         <AblyChatComponent />
                         {/* <div onClick={() => auth.signOut()}>Sair</div> */}
