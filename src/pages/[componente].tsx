@@ -96,6 +96,7 @@ export default function Componentes({ data, headers }: { data: any; headers: any
                             </thead>
                             <tbody>
                                 {
+                                    Array.isArray(data) ?
                                     data.map((result: {
                                             id: Key;
                                             imagem: any;
@@ -118,7 +119,7 @@ export default function Componentes({ data, headers }: { data: any; headers: any
                                             <td><span>{result.col4}</span></td>
                                             <td><span>{result.col5}</span></td>
                                         </tr>
-                                    ))
+                                    )) : null
                                 }
                                 <tr>
                                     <th scope="row">
