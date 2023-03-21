@@ -299,6 +299,16 @@
                             margin: 0 !important;
                             text-align: left;
                         }
+
+                        button {
+                            border: 1px solid #2A79E7;
+                            background-color: #2A79E7;
+                            color: #fff;
+                            font-weight: bold;
+                            font-size: 16px;
+                            padding: 5px 10px;
+                            border-radius: 4px;
+                        }
                     }
                 }
             }

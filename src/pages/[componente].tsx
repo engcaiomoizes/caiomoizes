@@ -1,12 +1,11 @@
 import { useRouter } from "next/router";
 import Header from '../components/header';
 import Footer from '../components/footer';
-//import Pecas from "../components/pecas";
 import styles from '../styles/Componentes.module.scss';
 import { GetStaticPaths, GetStaticProps } from 'next';
 
 import { ParsedUrlQuery } from "querystring";
-import { ReactElement, JSXElementConstructor, ReactFragment, ReactPortal, Key } from "react";
+import { Key } from "react";
 import Script from "next/script";
 import Link from "next/link";
 
@@ -15,8 +14,6 @@ interface Params extends ParsedUrlQuery {
 }
 
 export default function Componentes({ data, headers }: { data: any; headers: any }) {
-    const { query } = useRouter();
-
     return (
         <html>
             <head>
@@ -36,8 +33,8 @@ export default function Componentes({ data, headers }: { data: any; headers: any
                             <h3>Preço</h3>
                             <input type="range" className={`${styles.formRange}`} style={{ float: 'left' }} id="customRange1" min="239" max="8101" value="239" />
                             <input type="range" className={`${styles.formRange}`} style={{ float: 'right' }} id="customRange1" min="239" max="8101" value="8101" />
-                            <input type="number" className="form-control" style={{ float: 'left' }} min="239" max="8101" />
-                            <input type="number" className="form-control" style={{ float: 'right' }} min="239" max="8101" />
+                            <input type="number" className="form-control" style={{ float: 'left' }} min="239" max="8101" defaultValue={ `239` } />
+                            <input type="number" className="form-control" style={{ float: 'right' }} min="239" max="8101" defaultValue={ `8101` } />
                             <span>Mínimo / Máximo (R$)</span>
                         </div>
                         <div className={`${styles.check} form-check`}>
@@ -107,18 +104,19 @@ export default function Componentes({ data, headers }: { data: any; headers: any
                                             col3: string | number;
                                             col4: string | number;
                                             col5: string | number;
+                                            url: string;
                                         }) => (
                                         <tr key={result.id}>
                                             <th scope="row">
                                                 <input className="form-check-input" type="checkbox" value="" id="intel" />
                                             </th>
                                             <td>
-                                                <Link href={ `#` }>
+                                            <Link href={ `/peca/${result.url}` }>
                                                     <div className={ `` }>
                                                         <img src={`https://api-caiomoizes.vercel.app/${result.imagem}`} />
                                                     </div>
                                                 </Link>
-                                                <Link href={ `#` }>{result.col1}</Link>
+                                                <Link href={ `/peca/${result.url}` }>{result.col1}</Link>
                                             </td>
                                             <td><span>{result.col2}</span></td>
                                             <td><span>{result.col3}</span></td>
@@ -158,6 +156,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
     const response = await fetch(`https://api-caiomoizes.vercel.app/${componente}`);
     const data = await response.json();
 
+    console.log(data[0].urlamigavel);
+
     let headers;
 
     switch (componente) {
@@ -186,7 +186,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
                 col3: 'Formato',
                 col4: 'Slots Mem.',
                 col5: 'Máx. Memória'
-            }
+            };
             break;
         case 'placas-video':
             headers = {
@@ -195,7 +195,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
                 col3: 'Memória',
                 col4: 'Clock',
                 col5: 'Consumo (TDP)'
-            }
+            };
             break;
         case 'memorias':
             headers = {
@@ -204,7 +204,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
                 col3: 'Velocidade',
                 col4: 'Módulos',
                 col5: 'Capacidade'
-            }
+            };
             break;
         case 'gabinetes':
             headers = {
@@ -213,7 +213,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
                 col3: 'Fonte',
                 col4: 'Int. 3.5"',
                 col5: 'Int. 2.5"'
-            }
+            };
             break;
     }
     
