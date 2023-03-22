@@ -57,72 +57,84 @@ export default function Processador({ data }: { data: any }) {
                                                 <td>{data[0].pn}</td>
                                             </tr>
                                             <tr>
-                                                <th>Família</th>
-                                                <td>{data[0].familia}</td>
+                                                <th>Série</th>
+                                                <td>{data[0].serie}</td>
                                             </tr>
                                             <tr>
-                                                <th>Arquitetura</th>
-                                                <td>{data[0].arquitetura}</td>
+                                                <th>Interface</th>
+                                                <td>{data[0].interface}</td>
                                             </tr>
                                             <tr>
-                                                <th>Socket</th>
-                                                <td>{data[0].socket.socket}</td>
+                                                <th>Chipset</th>
+                                                <td>{data[0].chipset}</td>
                                             </tr>
                                             <tr>
-                                                <th>Frequência</th>
-                                                <td>{data[0].frequencia} GHz</td>
+                                                <th>Tipo da memória</th>
+                                                <td>{data[0].tipo_memoria}</td>
                                             </tr>
                                             <tr>
-                                                <th>Frequência Turbo</th>
-                                                <td>{data[0].frequencia_turbo} GHz</td>
+                                                <th>Tamanho da memória</th>
+                                                <td>{data[0].memoria}</td>
                                             </tr>
                                             <tr>
-                                                <th>Núcleos</th>
-                                                <td>{data[0].nucleos}</td>
+                                                <th>Core Clock</th>
+                                                <td>{data[0].core_clock} GHz</td>
                                             </tr>
                                             <tr>
-                                                <th>Threads</th>
-                                                <td>{data[0].threads}</td>
-                                            </tr>
-                                            <tr>
-                                                <th>Gráficos integrados</th>
-                                                <td>{data[0].graficos_integrados == 'Não' ? <div className={styles.nao}><i className="fa-solid fa-xmark"></i></div> : data[0].graficos_integrados}</td>
-                                            </tr>
-                                            <tr>
-                                                <th>L1 Cache</th>
-                                                <td>{data[0].cache_l1}</td>
-                                            </tr>
-                                            <tr>
-                                                <th>L2 Cache</th>
-                                                <td>{data[0].cache_l2}</td>
-                                            </tr>
-                                            <tr>
-                                                <th>L3 Cache</th>
-                                                <td>{data[0].cache_l3}</td>
-                                            </tr>
-                                            <tr>
-                                                <th>Litografia</th>
-                                                <td>{data[0].litografia}</td>
+                                                <th>Boost Clock</th>
+                                                <td>{data[0].boost_clock} GHz</td>
                                             </tr>
                                             <tr>
                                                 <th>Consumo (TDP)</th>
                                                 <td>{data[0].tdp} W</td>
                                             </tr>
                                             <tr>
-                                                <th>Suporte a ECC</th>
-                                                <td>{data[0].ecc ? <div className={styles.sim}><i className="fa-solid fa-check"></i></div> : <div className={styles.nao}><i className="fa-solid fa-xmark"></i></div>}</td>
+                                                <th>Fanless</th>
+                                                <td>{data[0].fanless ? <div className={styles.sim}><i className="fa-solid fa-check"></i></div> : <div className={styles.nao}><i className="fa-solid fa-xmark"></i></div>}</td>
                                             </tr>
                                             <tr>
-                                                <th>Cooler incluso</th>
-                                                <td>{data[0].fan_incluso ? <div className={styles.sim}><i className="fa-solid fa-check"></i></div> : <div className={styles.nao}><i className="fa-solid fa-xmark"></i></div>}</td>
+                                                <th>Water Cooled</th>
+                                                <td>{data[0].water_cooled ? <div className={styles.sim}><i className="fa-solid fa-check"></i></div> : <div className={styles.nao}><i className="fa-solid fa-xmark"></i></div>}</td>
                                             </tr>
                                             <tr>
-                                                <th>Hyperthreading / Multithreading</th>
-                                                <td>{data[0].hypermulti ? <div className={styles.sim}><i className="fa-solid fa-check"></i></div> : <div className={styles.nao}><i className="fa-solid fa-xmark"></i></div>}</td>
+                                                <th>Suporte a Multi-GPU</th>
+                                                <td>{data[0].suporte_multigpu ? <div className={styles.sim}><i className="fa-solid fa-check"></i></div> : <div className={styles.nao}><i className="fa-solid fa-xmark"></i></div>}</td>
                                             </tr>
                                             <tr>
-                                                <th>Virtualização</th>
-                                                <td>{data[0].virtualizacao ? <div className={styles.sim}><i className="fa-solid fa-check"></i></div> : <div className={styles.nao}><i className="fa-solid fa-xmark"></i></div>}</td>
+                                                <th>Comprimento</th>
+                                                <td>{data[0].comprimento} mm</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Suporte a Framesync</th>
+                                                <td>{data[0].frame_sync}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Portas DVI</th>
+                                                <td>{data[0].portas_dvi}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Portas HDMI</th>
+                                                <td>{data[0].portas_hdmi}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Portas Mini-HDMI</th>
+                                                <td>{data[0].portas_minihdmi}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Portas DisplayPort</th>
+                                                <td>{data[0].portas_dp}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Portas Mini-DisplayPort</th>
+                                                <td>{data[0].portas_minidp}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Cor</th>
+                                                <td>{data[0].cor}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Cor do LED</th>
+                                                <td>{data[0].cor_led == 'Não' ? <div className={styles.nao}><i className="fa-solid fa-xmark"></i></div> : data[0].graficos_integrados}</td>
                                             </tr>
                                         </tbody>
                                     </table>
