@@ -64,7 +64,7 @@ export default function Processador({ data }: { data: any }) {
                                                 <th>Formatos de placa-mãe suportados</th>
                                                 <td>{data[0].formatos.map((result: any) => {
                                                     return (
-                                                        <span>{result.formato}</span>
+                                                        <span key={result.id}>{result.formato}</span>
                                                     );
                                                 })}</td>
                                             </tr>
