@@ -111,12 +111,12 @@ export default function Componentes({ data, headers }: { data: any; headers: any
                                                 <input className="form-check-input" type="checkbox" value="" id="intel" />
                                             </th>
                                             <td>
-                                            <Link href={ `/peca/${result.url}` }>
+                                            <Link href={ `/peca/${headers.url}/${result.url}` }>
                                                     <div className={ `` }>
                                                         <img src={`https://api-caiomoizes.vercel.app/${result.imagem}`} />
                                                     </div>
                                                 </Link>
-                                                <Link href={ `/peca/${result.url}` }>{result.col1}</Link>
+                                                <Link href={ `/peca/${headers.url}/${result.url}` }>{result.col1}</Link>
                                             </td>
                                             <td><span>{result.col2}</span></td>
                                             <td><span>{result.col3}</span></td>
@@ -167,7 +167,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
                 col2: 'Frequência',
                 col3: 'Núcleos',
                 col4: 'Threads',
-                col5: 'Consumo (TDP)'
+                col5: 'Consumo (TDP)',
+                url: 'processador'
             };
             break;
         case 'fontes':
@@ -176,7 +177,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
                 col2: 'Tipo',
                 col3: 'Modular',
                 col4: 'Cert.',
-                col5: 'Potência'
+                col5: 'Potência',
+                url: 'fonte'
             };
             break;
         case 'placas-mae':
@@ -185,7 +187,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
                 col2: 'Socket CPU',
                 col3: 'Formato',
                 col4: 'Slots Mem.',
-                col5: 'Máx. Memória'
+                col5: 'Máx. Memória',
+                url: 'placa-mae'
             };
             break;
         case 'placas-video':
@@ -194,7 +197,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
                 col2: 'Chipset',
                 col3: 'Memória',
                 col4: 'Clock',
-                col5: 'Consumo (TDP)'
+                col5: 'Consumo (TDP)',
+                url: 'placa-video'
             };
             break;
         case 'memorias':
@@ -203,7 +207,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
                 col2: 'Tipo',
                 col3: 'Velocidade',
                 col4: 'Módulos',
-                col5: 'Capacidade'
+                col5: 'Capacidade',
+                url: 'memoria'
             };
             break;
         case 'gabinetes':
@@ -212,7 +217,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
                 col2: 'Tipo',
                 col3: 'Fonte',
                 col4: 'Int. 3.5"',
-                col5: 'Int. 2.5"'
+                col5: 'Int. 2.5"',
+                url: 'gabinete'
             };
             break;
     }
