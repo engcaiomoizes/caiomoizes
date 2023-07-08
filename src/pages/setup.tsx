@@ -1,5 +1,7 @@
-import Header from '../components/header';
-import Footer from '../components/footer';
+// import Header from '../components/header';
+// import Footer from '../components/footer';
+import Manutencao from '@/components/manutencao';
+import Link from 'next/link';
 import Script from 'next/script';
 
 export default function Setup() {
@@ -13,7 +15,9 @@ export default function Setup() {
                 <Script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/all.min.js"></Script>
             </head>
             <body>
-                <Header />
+                <Manutencao />
+                <Link href={`/`}>Voltar</Link>
+                {/* <Header />
                 <div className="container-fluid">
                     <h1>Meu Setup</h1>
                     <div className="container-setup">
@@ -79,7 +83,7 @@ export default function Setup() {
                         </div>
                     </div>                    
                 </div>
-                <Footer />
+                <Footer /> */}
             </body>
         </html>
     );

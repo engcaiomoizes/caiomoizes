@@ -15,8 +15,8 @@ export default async (req, res) => {
     });
 
     let mailData = {
-        from: 'caiomoizess2020@gmail.com',
-        to: 'engcaiomoizes@gmail.com',
+        from: process.env.NEXT_PRIVATE_EMAIL_SMTP,
+        to: process.env.NEXT_PUBLIC_EMAIL_ADDRESS,
         subject: `Mensagem de ${req.body.nome}`,
         text: req.body.mensagem + " | Enviado de: " + req.body.email
     };

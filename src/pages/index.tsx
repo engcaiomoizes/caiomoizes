@@ -59,6 +59,11 @@ export default function Home() {
                             <span>Estagiário</span>
                             <div className="periodo">2020 - 2022</div>
                         </div>
+                        <div className="col-pers1">
+                            <h3>HS Eletricidade - Valparaíso/SP</h3>
+                            <span>Técnico de Informática</span>
+                            <div className="periodo">2023 - Presente</div>
+                        </div>
                     </div>
                     <div className="container-pers1">
                         <h1>Cursos</h1>

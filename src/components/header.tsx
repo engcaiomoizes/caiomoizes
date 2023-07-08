@@ -14,14 +14,14 @@ export default function Header() {
             <div className="menu">
                 <ul>
                     <li><Link href={ `/` }>Home</Link></li>
-                    <li><Link href={ `/setup` }>Meu Setup</Link></li>
+                    {/* <li><Link href={ `/setup` }>Meu Setup</Link></li> */}
                     <li><Link href={ `/habilidades` }>Habilidades</Link></li>
                     {/* <li><Link href={ `/portfolio` }>Portfólio</Link></li>
                     <li><Link href={ `/orcamento` }>Orçamento</Link></li> */}
                     <li><Link href={ `/contato` }>Contato</Link></li>
                     <li><Link href={ `/chat` }>Chat</Link></li>
                     <li><Link href={ `/newsletter` }>Newsletter</Link></li>
-                    <li><Link href={ `/build` }>Monte seu PC</Link></li>
+                    {/* <li><Link href={ `/build` }>Monte seu PC</Link></li> */}
                 </ul>
             </div>
         </div>
