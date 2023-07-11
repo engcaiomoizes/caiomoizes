@@ -29,7 +29,7 @@ export default function Home() {
                         </div>
                         <div className="p-info">
                             <h1>Perfil</h1>
-                            <p>Meu nome é Caio Moizés Santos, sou formado em Engenharia da Computação pelo UniSALESIANO Araçatuba-SP.</p>
+                            <p>Meu nome é Caio Moizés Santos, tenho 23 anos, sou formado em Engenharia da Computação pelo UniSALESIANO Araçatuba-SP.</p>
                             <div className="redes">
                                 <Link href={ 'https://wa.me/' + process.env.NEXT_PUBLIC_TELEFONE_NUM }><span><i className="fa-brands fa-whatsapp"></i> (18) 99752-4254</span></Link>
                                 <span><i className="fa-solid fa-envelope"></i> {process.env.NEXT_PUBLIC_EMAIL_ADDRESS}</span>

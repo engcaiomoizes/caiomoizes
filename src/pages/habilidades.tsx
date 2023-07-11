@@ -161,7 +161,7 @@ export default function Habilidades() {
                                 // }}
                             />
                         </div>
-                        <div className="item-portfolio">
+                        {/* <div className="item-portfolio">
                             <img 
                                 src="img/davinci_icon.png"
                                 // onClick={(e, t) => {
@@ -172,8 +172,8 @@ export default function Habilidades() {
                                 //     )
                                 // }}
                             />
-                        </div>
-                        <div className="item-portfolio">
+                        </div> */}
+                        {/* <div className="item-portfolio">
                             <img 
                                 src="img/angular_logo.png"
                                 // onClick={(e, t) => {
@@ -184,7 +184,7 @@ export default function Habilidades() {
                                 //     )
                                 // }}
                             />
-                        </div>
+                        </div> */}
                         <div className="item-portfolio">
                             <img 
                                 src="img/rest-api-icon-8.jpg"
