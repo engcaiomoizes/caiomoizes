@@ -11,39 +11,27 @@ export default function Newsletter() {
     const [state, setState] = useState('IDLE');
     const [errorMessage, setErrorMessage] = useState(null);
 
-    // Função para banco de dados Firebase
     const subscribe = async () => {
         setState('LOADING');
         setErrorMessage(null);
         try {
-            const response = await axios.post("https://api-caiomoizes.vercel.app/newsletter", { email });
+            const res = await fetch(
+                `https://api-caiomoizes.vercel.app/newsletter`,
+                {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email: email })
+                }
+            );
             setState('SUCCESS');
             setEmail('');
-        } catch (e: any) {
-            setErrorMessage(e.response.data.error);
-            setState('ERROR');
+        } catch (err: any) {
+            setErrorMessage(err.response.data.error);
+            setState('ERROR')
         }
     };
-
-    // Função para banco de dados Supabase - PostgreeSQL
-    // const subscribe = async () => {
-    //     try {
-    //         const res = await fetch(
-    //             `http://localhost:5000/newsletter`,
-    //             {
-    //                 method: 'POST',
-    //                 headers: {
-    //                     'Content-Type': 'application/json'
-    //                 },
-    //                 body: JSON.stringify({ email: email })
-    //             }
-    //         );
-    //         const data = await res.json();
-    //         console.log(data);
-    //     } catch (err) {
-    //         console.log(err);
-    //     }
-    // };
 
     return (
         <html>
