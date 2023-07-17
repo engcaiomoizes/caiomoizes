@@ -33,7 +33,7 @@ export default function Home() {
                             <div className="redes">
                                 <a href={ "https://wa.me/" + process.env.NEXT_PUBLIC_TELEFONE_NUM } target="_blank"><span><i className="fa-brands fa-whatsapp"></i> (18) 99752-4254</span></a>
                                 <span><i className="fa-solid fa-envelope"></i> {process.env.NEXT_PUBLIC_EMAIL_ADDRESS}</span>
-                                <Link href={ 'https://instagram.com/' + process.env.NEXT_PUBLIC_INSTAGRAM_NICK }><span><i className="fa-brands fa-instagram"></i> @{process.env.NEXT_PUBLIC_INSTAGRAM_NICK}</span></Link>
+                                <a href={ "https://instagram.com/" + process.env.NEXT_PUBLIC_INSTAGRAM_NICK } target="_blank"><span><i className="fa-brands fa-instagram"></i> @{process.env.NEXT_PUBLIC_INSTAGRAM_NICK}</span></a>
                             </div>
                         </div>
                     </div>
