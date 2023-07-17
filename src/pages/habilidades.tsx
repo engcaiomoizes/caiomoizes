@@ -43,7 +43,7 @@ export default function Habilidades() {
                     <h1>Habilidades</h1>
                     <div className="container-pers2">
                         <span>
-                            Segue os conteúdos que possuo habilidades, como linguagens de programação e softwares de edição de imagem e vídeo.
+                            Abaixo estão as linguagens de programação e softwares que possuo conhecimento. Caso queria realizar algum projeto com os conteúdos abaixo, entre em contato.
                         </span>
                         <div className="item-portfolio">
                             <img 

@@ -31,7 +31,7 @@ export default function Home() {
                             <h1>Perfil</h1>
                             <p>Meu nome é <b>Caio Moizés Santos</b>, tenho 23 anos, sou formado em Engenharia da Computação pelo UniSALESIANO Araçatuba-SP.</p>
                             <div className="redes">
-                                <Link href={ 'https://wa.me/' + process.env.NEXT_PUBLIC_TELEFONE_NUM }><span><i className="fa-brands fa-whatsapp"></i> (18) 99752-4254</span></Link>
+                                <a href={ "https://wa.me/" + process.env.NEXT_PUBLIC_TELEFONE_NUM } target="_blank"><span><i className="fa-brands fa-whatsapp"></i> (18) 99752-4254</span></a>
                                 <span><i className="fa-solid fa-envelope"></i> {process.env.NEXT_PUBLIC_EMAIL_ADDRESS}</span>
                                 <Link href={ 'https://instagram.com/' + process.env.NEXT_PUBLIC_INSTAGRAM_NICK }><span><i className="fa-brands fa-instagram"></i> @{process.env.NEXT_PUBLIC_INSTAGRAM_NICK}</span></Link>
                             </div>
