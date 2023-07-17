@@ -16,7 +16,7 @@ export default function Newsletter() {
         setState('LOADING');
         setErrorMessage(null);
         try {
-            const response = await axios.post("http://localhost:5000/newsletter", { email });
+            const response = await axios.post("https://api-caiomoizes.vercel.app/newsletter", { email });
             setState('SUCCESS');
             setEmail('');
         } catch (e: any) {
