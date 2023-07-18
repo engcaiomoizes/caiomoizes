@@ -87,7 +87,7 @@ export default function Contato() {
                             <div style={{ clear: 'both' }}></div>
                             <input className="botao-enviar" type="submit" name="enviar" id="enviar" onClick={(e) => {handleSubmit(e)}} value="Enviar" />
                         </form>
-                        <p>Caso preferir, entre em contato via WhatsApp clicando <Link href={ `https://wa.me/${process.env.NEXT_PUBLIC_TELEFONE_NUM}` }>aqui</Link>.</p>
+                        <p>Caso preferir, entre em contato via WhatsApp clicando <a href={ "https://wa.me/" + process.env.NEXT_PUBLIC_TELEFONE_NUM } target="_blank">aqui</a>.</p>
                     </div>
                 </div>
                 <Footer />
