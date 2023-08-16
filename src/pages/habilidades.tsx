@@ -47,7 +47,60 @@ export default function Habilidades() {
                         </span>
                         <div className="item-portfolio">
                             <img 
+                                src="img/cpp_icon.png"
+                                title="C++"
+                                // onClick={(e, t) => {
+                                //     handleModal(
+                                //         e.target.src,
+                                //         "C++",
+                                //         ""
+                                //     )
+                                // }}
+                            />
+                        </div>
+                        <div className="item-portfolio">
+                            <img 
+                                src="img/html_icon.png"
+                                title="HTML"
+                                // onClick={(e, t) => {
+                                //     handleModal(
+                                //         e.target.src,
+                                //         "HTML",
+                                //         ""
+                                //     )
+                                // }}
+                            />
+                        </div>
+                        <div className="item-portfolio">
+                            <img 
+                                src="img/css_icon.png"
+                                title="CSS"
+                                // onClick={(e, t) => {
+                                //     handleModal(
+                                //         e.target.src,
+                                //         "CSS",
+                                //         ""
+                                //     )
+                                // }}
+                            />
+                        </div>
+                        <div className="item-portfolio">
+                            <img 
+                                src="img/js_icon.png"
+                                title="JavaScript"
+                                // onClick={(e, t) => {
+                                //     handleModal(
+                                //         e.target.src,
+                                //         "JavaScript",
+                                //         ""
+                                //     )
+                                // }}
+                            />
+                        </div>
+                        <div className="item-portfolio">
+                            <img 
                                 src="img/php_icon.png"
+                                title="PHP"
                                 // onClick={(e: { target: { src: string; }; }, t: string, c: string) => {
                                 //     handleModal(
                                 //         e.target.src,
@@ -67,59 +120,12 @@ export default function Habilidades() {
                         </div>
                         <div className="item-portfolio">
                             <img 
-                                src="img/html_icon.png"
+                                src="img/laravel_icon.png"
+                                title="Laravel"
                                 // onClick={(e, t) => {
                                 //     handleModal(
                                 //         e.target.src,
-                                //         "HTML",
-                                //         ""
-                                //     )
-                                // }}
-                            />
-                        </div>
-                        <div className="item-portfolio">
-                            <img 
-                                src="img/css_icon.png"
-                                // onClick={(e, t) => {
-                                //     handleModal(
-                                //         e.target.src,
-                                //         "CSS",
-                                //         ""
-                                //     )
-                                // }}
-                            />
-                        </div>
-                        <div className="item-portfolio">
-                            <img 
-                                src="img/js_icon.png"
-                                // onClick={(e, t) => {
-                                //     handleModal(
-                                //         e.target.src,
-                                //         "JavaScript",
-                                //         ""
-                                //     )
-                                // }}
-                            />
-                        </div>
-                        <div className="item-portfolio">
-                            <img 
-                                src="img/cpp_icon.png"
-                                // onClick={(e, t) => {
-                                //     handleModal(
-                                //         e.target.src,
-                                //         "C++",
-                                //         ""
-                                //     )
-                                // }}
-                            />
-                        </div>
-                        <div className="item-portfolio">
-                            <img 
-                                src="img/android_icon.png"
-                                // onClick={(e, t) => {
-                                //     handleModal(
-                                //         e.target.src,
-                                //         "Android",
+                                //         "Angular",
                                 //         ""
                                 //     )
                                 // }}
@@ -128,6 +134,7 @@ export default function Habilidades() {
                         <div className="item-portfolio">
                             <img 
                                 src="img/mysql_icon.png"
+                                title="MySQL"
                                 // onClick={(e, t) => {
                                 //     handleModal(
                                 //         e.target.src,
@@ -139,55 +146,21 @@ export default function Habilidades() {
                         </div>
                         <div className="item-portfolio">
                             <img 
-                                src="img/photoshop_icon.png"
+                                src="img/firebird-logo.png"
+                                title="Firebird"
                                 // onClick={(e, t) => {
                                 //     handleModal(
                                 //         e.target.src,
-                                //         "Adobe Photoshop",
+                                //         "Firebird",
                                 //         ""
                                 //     )
                                 // }}
                             />
                         </div>
-                        <div className="item-portfolio">
-                            <img 
-                                src="img/illustrator_icon.png"
-                                // onClick={(e, t) => {
-                                //     handleModal(
-                                //         e.target.src,
-                                //         "Adobe Illustrator",
-                                //         ""
-                                //     )
-                                // }}
-                            />
-                        </div>
-                        {/* <div className="item-portfolio">
-                            <img 
-                                src="img/davinci_icon.png"
-                                // onClick={(e, t) => {
-                                //     handleModal(
-                                //         e.target.src,
-                                //         "DaVinci Resolve",
-                                //         ""
-                                //     )
-                                // }}
-                            />
-                        </div> */}
-                        {/* <div className="item-portfolio">
-                            <img 
-                                src="img/angular_logo.png"
-                                // onClick={(e, t) => {
-                                //     handleModal(
-                                //         e.target.src,
-                                //         "Angular",
-                                //         ""
-                                //     )
-                                // }}
-                            />
-                        </div> */}
                         <div className="item-portfolio">
                             <img 
                                 src="img/rest-api-icon-8.jpg"
+                                title="API REST"
                                 // onClick={(e, t) => {
                                 //     handleModal(
                                 //         e.target.src,
@@ -200,6 +173,7 @@ export default function Habilidades() {
                         <div className="item-portfolio">
                             <img 
                                 src="img/logo-java.png"
+                                title="Java"
                                 // onClick={(e, t) => {
                                 //     handleModal(
                                 //         e.target.src,
@@ -211,11 +185,51 @@ export default function Habilidades() {
                         </div>
                         <div className="item-portfolio">
                             <img 
-                                src="img/firebird-logo.png"
+                                src="img/android_icon.png"
+                                title="Android"
                                 // onClick={(e, t) => {
                                 //     handleModal(
                                 //         e.target.src,
-                                //         "Firebird",
+                                //         "Android",
+                                //         ""
+                                //     )
+                                // }}
+                            />
+                        </div>
+                        <div className="item-portfolio">
+                            <img 
+                                src="img/vegaspro_icon.png"
+                                title="Vegas Pro"
+                                // onClick={(e, t) => {
+                                //     handleModal(
+                                //         e.target.src,
+                                //         "DaVinci Resolve",
+                                //         ""
+                                //     )
+                                // }}
+                            />
+                        </div>
+                        <div className="item-portfolio">
+                            <img 
+                                src="img/photoshop_icon.png"
+                                title="Adobe Photoshop"
+                                // onClick={(e, t) => {
+                                //     handleModal(
+                                //         e.target.src,
+                                //         "Adobe Photoshop",
+                                //         ""
+                                //     )
+                                // }}
+                            />
+                        </div>
+                        <div className="item-portfolio">
+                            <img 
+                                src="img/illustrator_icon.png"
+                                title="Adobe Illustrator"
+                                // onClick={(e, t) => {
+                                //     handleModal(
+                                //         e.target.src,
+                                //         "Adobe Illustrator",
                                 //         ""
                                 //     )
                                 // }}
