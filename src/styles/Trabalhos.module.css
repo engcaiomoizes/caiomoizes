@@ -1,0 +1,32 @@
+.card {
+    display: flex;
+    width: 200px;
+    height: 350px;
+    /* border: 1px solid #000; */
+    margin: 10px 20px;
+    box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 10px;
+    background-color: #f3f3f3;
+}
+
+.item {
+    width: 150px;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.item h2 {
+    font-weight: bold;
+    font-size: 20px !important;
+}
