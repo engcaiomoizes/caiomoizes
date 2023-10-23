@@ -62,6 +62,11 @@ export default function Home() {
                         <div className="col-pers1">
                             <h3>HS Eletricidade - Valparaíso/SP</h3>
                             <span>Técnico de Informática</span>
+                            <div className="periodo">2023</div>
+                        </div>
+                        <div className="col-pers1">
+                            <h3>Secretaria de Assistência Social - Prefeitura Municipal de Araçatuba/SP</h3>
+                            <span>Auxiliar de C.P.D.</span>
                             <div className="periodo">2023 - Presente</div>
                         </div>
                     </div>
