@@ -107,9 +107,9 @@ a {
 } */
 
 :root {
-  --primary-color: #00a8ff;
+  --primary-color: #ffca05;
   --secondary-color: #444243;
-  --alternative-color: #ffca05;
+  --alternative-color: #00a8ff;
 }
 
 * {
