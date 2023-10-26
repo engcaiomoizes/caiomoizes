@@ -109,6 +109,7 @@ a {
 :root {
   --primary-color: #00a8ff;
   --secondary-color: #444243;
+  --alternative-color: #ffca05;
 }
 
 * {
@@ -207,7 +208,7 @@ a {
   width: 100%;
   display: flex;
   height: 140px;
-  background-color: var(--primary-color);
+  background-color: #444243;
   color: #fff;
   padding: 20px;
   justify-content: center;
@@ -251,7 +252,7 @@ span, p {
 }
 
 .menu {
-  background-color: #ffca05;
+  background-color: var(--primary-color);
   height: 50px;
   width: 100%;
   display: block;
