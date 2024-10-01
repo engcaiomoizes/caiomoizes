@@ -43,7 +43,7 @@ export default function Habilidades() {
                     <h1>Habilidades</h1>
                     <div className="container-pers2">
                         <span>
-                            Abaixo estão as linguagens de programação e softwares que possuo conhecimento. Caso queria realizar algum projeto com os conteúdos abaixo, entre em contato.
+                            {/* Abaixo estão as linguagens de programação e softwares que possuo conhecimento. Caso queria realizar algum projeto com os conteúdos abaixo, entre em contato. */}
                         </span>
                         <div className="item-portfolio">
                             <img 
@@ -133,6 +133,19 @@ export default function Habilidades() {
                         </div>
                         <div className="item-portfolio">
                             <img 
+                                src="img/vuejs_icon.png"
+                                title="VueJS"
+                                // onClick={(e, t) => {
+                                //     handleModal(
+                                //         e.target.src,
+                                //         "Android",
+                                //         ""
+                                //     )
+                                // }}
+                            />
+                        </div>
+                        <div className="item-portfolio">
+                            <img 
                                 src="img/mysql_icon.png"
                                 title="MySQL"
                                 // onClick={(e, t) => {
@@ -196,7 +209,7 @@ export default function Habilidades() {
                                 // }}
                             />
                         </div>
-                        <div className="item-portfolio">
+                        {/* <div className="item-portfolio">
                             <img 
                                 src="img/vegaspro_icon.png"
                                 title="Vegas Pro"
@@ -234,7 +247,7 @@ export default function Habilidades() {
                                 //     )
                                 // }}
                             />
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 <Footer />

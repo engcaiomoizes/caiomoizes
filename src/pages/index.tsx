@@ -83,6 +83,11 @@ export default function Home() {
                             <span>Cursos Online SP</span>
                             <div className="periodo">2022</div>
                         </div>
+                        <div className="col-pers1">
+                            <h3>Imersão Inteligência Artificial</h3>
+                            <span>Alura / Google</span>
+                            <div className="periodo">2024</div>
+                        </div>
                     </div>
                     <div className="container-pers1">
                         <h1>Trabalho Voluntário</h1>

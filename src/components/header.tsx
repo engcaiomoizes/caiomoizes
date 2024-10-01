@@ -19,10 +19,10 @@ export default function Header() {
                     {/* <li><Link href={ `/trabalhos` }>Trabalhos</Link></li> */}
                     {/* <li><Link href={ `/portfolio` }>Portfólio</Link></li>
                     <li><Link href={ `/orcamento` }>Orçamento</Link></li> */}
-                    <li><Link href={ `/videos` }>Vídeos</Link></li>
+                    {/* <li><Link href={ `/videos` }>Vídeos</Link></li> */}
                     <li><Link href={ `/contato` }>Contato</Link></li>
-                    <li><Link href={ `/chat` }>Chat</Link></li>
-                    <li><Link href={ `/newsletter` }>Newsletter</Link></li>
+                    {/* <li><Link href={ `/chat` }>Chat</Link></li> */}
+                    {/* <li><Link href={ `/newsletter` }>Newsletter</Link></li> */}
                     {/* <li><Link href={ `/build` }>Monte seu PC</Link></li> */}
                 </ul>
             </div>
